@@ -1,0 +1,9 @@
+{
+  "node_version": "20",
+  "graphs": {
+    "agent": "./agents/desmond/agent.ts:agent",
+    "supervisor": "./supervisor/agent.ts:getAgent"
+  },
+  "dependencies": ["."],
+  "env": ".env"
+}
