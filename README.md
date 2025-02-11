@@ -8,6 +8,14 @@ Considerations for the itinerary will include:
 - Attractions
 - Food Recommendations
 
+## Dependencies
+- Docker
+- Vscode
+
 ## Launch
-- vscode debugging enabled. Launch with F5
-- npm run agent will also launch langgraph dev server
+1. Open folder in vscode
+2. Select to open in remote container
+3. Rename .env.template to .env and add keys (done during workshop)
+4. Vscode debugging is enabled. Launch with F5
+5. Open brower and navigate to: https://smith.langchain.com/studio/thread?baseUrl=http%3A%2F%2Flocalhost%3A2024 (notice localhost as baseurl)
+
