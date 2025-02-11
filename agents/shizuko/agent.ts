@@ -52,12 +52,12 @@ async function agentNode(state: State): Promise<Partial<State>> {
 const graphBuilder = new StateGraph(StateAnnotation)
   .addNode('agent', agentNode)
   .addNode('tools', toolNode)
-  .addNode(favoriteCityNodeName, desmondsFavoriteCity)
-  .addEdge(START, favoriteCityNodeName)
-  .addEdge(favoriteCityNodeName, 'agent')
-  .addConditionalEdges('agent', toolsCondition)
+  .addNode('favoriteCityRetriever', desmondsFavoriteCity)
+  .addConditionalEdges('agent', toolsCondition, ['tools', END])
   .addEdge('tools', 'agent')
-  .addEdge('agent', END)
+  .addEdge(START, 'favoriteCityRetriever')
+  .addEdge('favoriteCityRetriever', 'agent')
+  .addEdge('agent', END);
 
 const checkpointer = new MemorySaver();
 export const agent = graphBuilder.compile({ checkpointer });
