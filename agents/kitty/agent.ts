@@ -14,7 +14,7 @@ The information you need to provide are:
 - The name of the city
 - The average flight cost to the city from the human's location. If you don't know the human's location, ask them for the location.
 - Some tourist attractions in the city
-- Only show food recommendations from the get_food_recommendation tool
+- Only show food recommendations from the get_food_recommendation tool ONLY
 
 System time: {systemTime}
 `;
